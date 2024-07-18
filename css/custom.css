@@ -1,0 +1,451 @@
+/* Your custom css code goes here */
+
+/* Your custom css code goes here */
+/* ////nav/// */
+
+main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+ .gal-item img {
+    width: 100%;
+    height: 200px; /* You can adjust this height as needed */
+    object-fit: cover; /* This ensures the images cover the area without stretching */
+}
+
+nav {
+    width: 100%;
+    background: #1b1010;
+    /* background: rgb(19, 58, 7); */
+    color: gold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.3s; /* Smooth transition for sticky behavior */
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: 900;
+    color: #eea609;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    padding: 10px 15px;
+}
+
+.nav-links a {
+    color: gold;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover, .dropdown:hover .dropbtn {
+    background-color: #eea609;
+}
+
+.donate-btn {
+    background: #fdc21d;
+    color: #333;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.donate-btn:hover {
+    background: #59c029;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fdc21d;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.menu-icon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #555;
+    }
+
+    .nav-links a {
+        padding: 15px;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        flex-direction: column;
+        width: auto;
+        box-shadow: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #555;
+    }
+
+    .logo {
+        font-size: 1.2em;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+  /* //////////////////////mission styles////// */
+  .Mission-About{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 20rem;
+    background-image: linear-gradient(45deg, gold,red);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .Mission-About::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 400px;
+    background: #1b101050;
+  }
+  
+  .Mission-About h1{
+    position: relative;
+    color: aliceblue;
+    font-weight: bolder;
+    font-size: 40px;
+  }
+  
+  .Mission-About p{
+    position: relative;
+    color: aliceblue;
+  }
+
+  @media screen and (max-width: 780px) {
+    .Mission-About{
+        padding: 4rem;
+    }
+  }
+
+
+
+
+/* 
+  ////////////////////////////////////////////prooovvkgweg////////////////////////////// */
+/* Default CSS for probootstrap-hero-inner */
+/* Base styles for hero section */
+.hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 40px;
+    color: white;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Overlay using pseudo-element */
+/* Base styles for hero section */
+.hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 40px;
+    color: white;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden; /* Prevent overflow of the animated background */
+    animation: backgroundMovement 30s ease-in-out infinite; /* Apply the background animation */
+}
+
+/* Background movement animation */
+@keyframes backgroundMovement {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Overlay using pseudo-element */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1; /* Ensure the overlay is behind the text */
+}
+
+/* Container to center the content */
+.hero-section .container {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Content styling */
+.hero-section .content {
+    max-width: 600px;
+}
+
+/* Heading styling */
+.hero-section h2 {
+    font-size: 4.5em;
+    margin: 0 0 20px;
+    line-height: 1.1;
+    color: aliceblue;
+}
+
+/* Paragraph styling */
+.hero-section p {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+/* Responsive adjustments */
+/* @media (max-width: 767px) {
+    .hero-section {
+        background-attachment: scroll;
+        height: auto;
+        padding: 20px;
+        display: block;
+    }
+    .hero-section .container {
+        padding: 0;
+    }
+    .hero-section .content {
+        max-width: 100%;
+        padding: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.7); 
+        width: 100%;
+    }
+    .hero-section h2 {
+        font-size: 3em;
+    }
+    .hero-section p {
+        font-size: 1.2em;
+    }
+} */
+
+
+
+
+/* Responsive adjustments */
+
+/* Base styles for hero section */
+.hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 40px;
+    color: white;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden; /* Prevent overflow of the animated background */
+    animation: backgroundMovement 80s ease-in-out infinite; /* Apply the background animation */
+}
+
+/* Background movement animation */
+@keyframes backgroundMovement {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Overlay using pseudo-element */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1; /* Ensure the overlay is behind the text */
+}
+
+/* Container to center the content */
+.hero-section .container {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Content styling */
+.hero-section .content {
+    max-width: 1000px;
+}
+
+/* Heading styling */
+.hero-section h2 {
+    font-size: 5.5em;
+    font-weight: 900;
+    margin: 0 0 20px;
+    line-height: 1.1;
+    color: aliceblue;
+}
+
+/* Paragraph styling */
+.hero-section p {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .hero-section {
+        height: 70dvh;
+        background-position: center;
+        background-size: cover;
+        background-attachment:local;
+        padding: 20px;
+        display: block;
+        animation: backgroundMovementSmallScreen 200s ease-in-out infinite; /* Slow down animation on small screens */
+    }
+    .hero-section .content {
+        width: 100%;
+        height: 70dvh;
+        text-align: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .hero-section h2 {
+        font-size: 2.5em;
+        margin: 0 0 20px;
+        line-height: 1.1;
+        color: aliceblue;
+    }
+}
+
+/* Slower background movement animation for small screens */
+@keyframes backgroundMovementSmallScreen {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+
+.img-EmResponsive{
+    width: 30px;
+    height: 30px;
+}
